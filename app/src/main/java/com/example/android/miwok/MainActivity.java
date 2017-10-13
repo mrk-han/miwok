@@ -35,4 +35,9 @@ public class MainActivity extends AppCompatActivity {
         Intent openNumbersActivity = new Intent(this, NumbersActivity.class);
         startActivity(openNumbersActivity);
     }
+
+    public void openPhrasesList(View view) {
+        Intent openPhrasesActivity = new Intent(this, PhrasesActivity.class);
+        startActivity(openPhrasesActivity);
+    }
 }

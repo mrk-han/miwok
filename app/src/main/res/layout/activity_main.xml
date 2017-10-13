@@ -45,6 +45,7 @@
         android:id="@+id/phrases"
         style="@style/CategoryStyle"
         android:background="@color/category_phrases"
-        android:text="@string/category_phrases" />
+        android:text="@string/category_phrases"
+        android:onClick="openPhrasesList"/>
 
 </LinearLayout>
