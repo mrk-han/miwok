@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
+import static com.example.android.miwok.R.id.family;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,6 +20,12 @@ public class MainActivity extends AppCompatActivity {
 
         // Find the View that shows the numbers category
         TextView numbers = (TextView) findViewById(R.id.numbers);
+        // Find the View that shows the family category
+        TextView family = (TextView) findViewById(R.id.family);
+        // Find the View that shows the colors category
+        TextView colors = (TextView) findViewById(R.id.colors);
+        // Find the View that shows the phrases category
+        TextView phrases = (TextView) findViewById(R.id.phrases);
 
 
         if (numbers != null) {
@@ -35,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
-        // Find the View that shows the family category
-        TextView family = (TextView) findViewById(R.id.family);
 
         if (family != null) {
             // Set a click listener on that View
@@ -53,8 +59,6 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
-        // Find the View that shows the colors category
-        TextView colors = (TextView) findViewById(R.id.colors);
 
         if (colors != null) {
             // Set a click listener on that View
@@ -71,8 +75,6 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
-        // Find the View that shows the phrases category
-        TextView phrases = (TextView) findViewById(R.id.phrases);
 
         if (phrases != null) {
             // Set a click listener on that View
