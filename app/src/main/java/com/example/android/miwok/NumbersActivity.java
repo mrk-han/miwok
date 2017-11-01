@@ -28,13 +28,13 @@ public class NumbersActivity extends AppCompatActivity {
 
         LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
 
-        int index = 0;
-
-        while (index < words.size()) {
+        for (int index = 0; index < words.size(); index++) {
+            //Create new TextView
             TextView wordView = new TextView(this);
+            //Set the text of the TextView to be the word of the current index
             wordView.setText(words.get(index));
+            //Add this TextView as another child to the root view of this layout
             rootView.addView(wordView);
-            index++;
         }
     }
 }
