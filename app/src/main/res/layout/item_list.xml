@@ -7,6 +7,14 @@
     android:padding="16dp">
 
     <TextView
+        android:id="@+id/default_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        tools:text="one" />
+
+    <TextView
         android:id="@+id/miwok_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,12 +22,5 @@
         android:textAppearance="?android:attr/textAppearanceListItemSmall"
         tools:text="lutti" />
 
-    <TextView
-        android:id="@+id/default_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:textAppearance="?android:attr/textAppearanceListItemSmall"
-        tools:text="one" />
 
 </LinearLayout>
