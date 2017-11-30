@@ -8,6 +8,9 @@ package com.example.android.miwok;
 
 public class ReportCard {
 
+
+    // Initialize Variables
+    //
     private int englishGrade;
     private int mathGrade;
     private int historyGrade;
@@ -15,6 +18,10 @@ public class ReportCard {
     private int musicGrade;
     private String studentName;
 
+
+
+    //Getters and Setters
+    //
     public int getEnglishGrade() {
         return englishGrade;
     }
@@ -63,6 +70,10 @@ public class ReportCard {
         this.studentName = studentName;
     }
 
+
+
+    // Constructors
+    //
     public ReportCard(String studentName, int englishGrade, int mathGrade, int historyGrade, int artGrade, int musicGrade) {
         this.studentName = studentName;
         this.englishGrade = englishGrade;
@@ -72,14 +83,21 @@ public class ReportCard {
         this.musicGrade = musicGrade;
     }
 
+
+
     //The most important portion of your project will be the toString() method, which gives
     //a human-readable String representing the data stored in the report card
+    //
     @Override
     public String toString() {
         return "Name: " + getStudentName() + "\n" + "English grade: " + getEnglishGrade() + "\n" + "Math grade: " +
                 getMathGrade() + "\n" + "Music grade: " + getMusicGrade() + "\n" + "History grade: " + getHistoryGrade() + "\n" + "Art grade: " + getArtGrade();
     }
 
+
+
+    // Generate Objects!
+    //
     public static void main(String[] args) {
         ReportCard markReportCard = new ReportCard("Mark", 1, 2, 3, 4, 5);
         System.out.println(markReportCard.toString());
