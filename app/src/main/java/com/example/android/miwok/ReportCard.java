@@ -11,6 +11,7 @@ public class ReportCard {
     private int historyGrade;
     private int artGrade;
     private int musicGrade;
+    private String studentName;
 
     public int getEnglishGrade() {
         return englishGrade;
@@ -52,7 +53,16 @@ public class ReportCard {
         this.musicGrade = musicGrade;
     }
 
-    public ReportCard(int englishGrade, int mathGrade, int historyGrade, int artGrade, int musicGrade) {
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    public ReportCard(String studentName, int englishGrade, int mathGrade, int historyGrade, int artGrade, int musicGrade) {
+        this.studentName = studentName;
         this.englishGrade = englishGrade;
         this.mathGrade = mathGrade;
         this.historyGrade = historyGrade;
@@ -60,11 +70,18 @@ public class ReportCard {
         this.musicGrade = musicGrade;
     }
 
+    //The most important portion of your project will be the toString() method, which gives
+    //a human-readable String representing the data stored in the report card
     @Override
     public String toString() {
-        return "Name: John Doe; English grade: " + getEnglishGrade() + "; History grade: " + getHistoryGrade() + "; Math grade: " + getMathGrade() + "; Art grade: " + getArtGrade() + "; Music grade: " + getMusicGrade()+ ";";
+        return "Name: " + getStudentName() + "\n" + "English grade: " + getEnglishGrade() + "\n" + "Math grade: " +
+                getMathGrade() + "\n" + "Music grade: " + getMusicGrade() + "\n" + "History grade: " + getHistoryGrade() + "\n" + "Art grade: " + getArtGrade();
     }
 
+    public static void main(String[] args) {
+        ReportCard markReportCard = new ReportCard("Mark", 1, 2, 3, 4, 5);
+        System.out.println(markReportCard.toString());
+    }
 
 
 }
