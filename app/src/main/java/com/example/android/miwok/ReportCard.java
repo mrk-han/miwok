@@ -2,6 +2,8 @@ package com.example.android.miwok;
 
 /**
  * Created by markhan on 11/15/17.
+ * This class can be used to grade the student on how they do in the future? For now, just here
+ * for a Udacity Side Project and to experiment with updating Gradle Plugin
  */
 
 public class ReportCard {
