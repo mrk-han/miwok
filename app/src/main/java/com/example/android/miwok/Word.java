@@ -9,13 +9,19 @@ public class Word {
 
     private String mDefaultTranslation;
     private String mMiwokTranslation;
-    private int mImage;
+    private int mImageResourceId;
 
 
 
     public Word(String defaultTranslation, String miwokTranslation) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+    }
+
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId) {
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
+        mImageResourceId = imageResourceId;
     }
 
     /**
@@ -35,8 +41,8 @@ public class Word {
     /**
      * Get the image for the word
      */
-    public int getImage() {
-        return mImage;
+    public int getImageResourceId() {
+        return mImageResourceId;
     }
 
 }
