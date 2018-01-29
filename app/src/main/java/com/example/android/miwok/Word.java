@@ -9,7 +9,8 @@ public class Word {
 
     private String mDefaultTranslation;
     private String mMiwokTranslation;
-    private int mImageResourceId;
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
+    private static final int NO_IMAGE_PROVIDED = -1;
 
 
 
@@ -43,6 +44,16 @@ public class Word {
      */
     public int getImageResourceId() {
         return mImageResourceId;
+    }
+
+
+    /**
+     * Returns whether the word has an image associated with it
+     *
+     * @return boolean
+     */
+    public boolean hasImage() {
+        return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 
 }
