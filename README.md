@@ -7,7 +7,7 @@ Used in a Udacity course in the Beginning Android Nanodegree.  This will eventua
 
 Demo
 --------------
-![Alt Text](https://github.com/mrk-han/miwok/blob/master/miwok_demo.gif)
+![Alt Text](https://github.com/mrk-han/miwok/blob/master/miwok_demonstration.gif)
 
 
 Pre-requisites
