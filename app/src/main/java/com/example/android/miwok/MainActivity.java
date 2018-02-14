@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         TextView phrases = (TextView) findViewById(R.id.phrases);
 
 
-
         if (numbers != null) {
             // Set a click listener on that View
             //

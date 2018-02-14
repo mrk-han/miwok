@@ -15,31 +15,40 @@ import java.util.ArrayList;
 
 /**
  * Created by markhan on 11/12/17.
+ * <p>
+ * {@link WordAdapter} is an {@link ArrayAdapter} that can provide the layout for each list item
+ * based on a data source, which is a list of {@link Word} objects.
  */
 
-public class WordAdapter extends ArrayAdapter<Word>{
+public class WordAdapter extends ArrayAdapter<Word> {
 
 
-    // Resource ID for the background color for this list of words
+    /**
+     * Resource ID for the background color for this list of words
+     */
     private int mColorResourceId;
 
 
-
-    // Word adapter Constructor
+    /**
+     * Create a new {@link WordAdapter} object.
+     *
+     * @param context         is the current context (i.e. Activity) that the adapter is being created in.
+     * @param words           is the list of {@link Word}s to be displayed.
+     * @param colorResourceId is the resource ID for the background color for this list of words
+     */
     public WordAdapter(Context context, ArrayList words, int colorResourceId) {
-        super(context,0, words);
+        super(context, 0, words);
         mColorResourceId = colorResourceId;
     }
-
 
 
     // Purpose of getView method is to return listitem view and return it to the listView
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-
+        // Check if an existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
@@ -63,6 +72,7 @@ public class WordAdapter extends ArrayAdapter<Word>{
         ImageView iconImage = (ImageView) listItemView.findViewById(R.id.iconImage);
 
         if (currentWord.hasImage()) {
+            // If an image is available,
             // Get the appropriate image from the current object and
             // set this resource id on the imageView
             iconImage.setImageResource(currentWord.getImageResourceId());
@@ -70,7 +80,7 @@ public class WordAdapter extends ArrayAdapter<Word>{
             // If view was previously hidden, we need to make it visible again
             iconImage.setVisibility(View.VISIBLE);
         } else {
-            // Hide the imageview {set visibility to GONE}
+            // Hide the ImageView {set visibility to GONE}
             iconImage.setVisibility(View.GONE);
         }
 
@@ -82,9 +92,6 @@ public class WordAdapter extends ArrayAdapter<Word>{
         int color = ContextCompat.getColor(getContext(), mColorResourceId);
         // Set the background color of the text container view
         textContainer.setBackgroundColor(color);
-
-
-
 
 
         // Returns the whole list item layout (containing 2 text views) so that it can be shown in

@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 public class ColorsActivity extends AppCompatActivity {
 
+    /** Handles playback of all the sound files */
     private MediaPlayer mMediaPlayer;
 
     @Override
@@ -54,6 +55,7 @@ public class ColorsActivity extends AppCompatActivity {
         //
         listView.setAdapter(adapter);
 
+        // Set a click listener to play the audio when the list item is clicked on
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             /**
              * AdapterView: The AdapterView where the click happened.
@@ -66,9 +68,11 @@ public class ColorsActivity extends AppCompatActivity {
                 // Get the {@link Word} object at the given position the user clicked on
                 Word word = words.get(position);
 
+                // Create and setup the {@link MediaPlayer} for the audio resource associated
+                // with the current word
                 mMediaPlayer = MediaPlayer.create(ColorsActivity.this, word.getAudioResourceId());
 
-                // Start playing audio
+                // Start the audio file (pretty sure create prepares the audio files already for you)
                 mMediaPlayer.start();
             }
         });
