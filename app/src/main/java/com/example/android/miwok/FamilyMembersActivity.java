@@ -53,6 +53,7 @@ public class FamilyMembersActivity extends AppCompatActivity {
         //
         listView.setAdapter(adapter);
 
+        // Set a click listener to play the audio when the list item is clicked on
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             /**
              * AdapterView: The AdapterView where the click happened.
@@ -65,6 +66,8 @@ public class FamilyMembersActivity extends AppCompatActivity {
                 // Get the {@link Word} object at the given position the user clicked on
                 Word word = words.get(position);
 
+                // Create and setup the {@link MediaPlayer} for the audio resource associated
+                // with the current word
                 mMediaPlayer = MediaPlayer.create(FamilyMembersActivity.this, word.getAudioResourceId());
 
                 // Start playing audio
