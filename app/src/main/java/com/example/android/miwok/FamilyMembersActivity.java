@@ -18,7 +18,7 @@ public class FamilyMembersActivity extends AppCompatActivity {
 
     /**
      * This listener gets triggered when the {@link MediaPlayer} has completed
-     * playing the audio file
+     * playing the audio file.
      */
     private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
         @Override
