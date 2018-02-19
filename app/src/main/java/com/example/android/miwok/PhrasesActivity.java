@@ -72,6 +72,7 @@ public class PhrasesActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 // Release the media player if it currently exists because we are about to
                 // play a different sound file
+                // Use Case: If a user taps rapidly on a bunch of different audio files, it won't have time to complete the audio then release resource, so we call it here as well.
                 releaseMediaPlayer();
 
                 // Get the {@link Word} object at the given position the user clicked on
