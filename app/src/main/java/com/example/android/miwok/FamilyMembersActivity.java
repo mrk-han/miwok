@@ -113,6 +113,15 @@ public class FamilyMembersActivity extends AppCompatActivity {
     }
 
     /**
+     * Stops sound when we pause app
+     */
+    @Override
+    protected void onPause() {
+        super.onPause();
+        releaseMediaPlayer();
+    }
+
+    /**
      * Clean up the media player by releasing its resources.
      */
     private void releaseMediaPlayer() {
