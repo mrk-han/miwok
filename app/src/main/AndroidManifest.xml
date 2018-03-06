@@ -29,18 +29,46 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".NumbersActivity"
-            android:label="Numbers" />
+            android:label="Numbers"
+            android:parentActivityName=".MainActivity">
+            <!--MetaData to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
         <activity
             android:name=".FamilyMembersActivity"
-            android:label="Family Members" />
+            android:label="Family Members"
+            android:parentActivityName=".MainActivity">
+            <!--MetaData to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
         <activity
             android:name=".ColorsActivity"
-            android:label="Colors" />
+            android:label="Colors"
+            android:parentActivityName=".MainActivity">
+            <!--MetaData to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
         <activity
             android:name=".PhrasesActivity"
-            android:label="Phrases" />
+            android:label="Phrases"
+            android:parentActivityName=".MainActivity">
+            <!--MetaData to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>

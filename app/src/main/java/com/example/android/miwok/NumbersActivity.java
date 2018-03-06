@@ -68,6 +68,12 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // To allow Up navigation with the app icon in the action bar
+        if (getActionBar() != null) {
+            getActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
         setContentView(R.layout.word_list);
 
         // Create and setup the {@link AudioManager} to request audio focus
@@ -140,7 +146,6 @@ public class NumbersActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
     /**
