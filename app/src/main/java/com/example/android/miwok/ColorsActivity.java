@@ -67,11 +67,16 @@ public class ColorsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // To allow Up navigation with the app icon in the action bar
+        if (getActionBar() != null) {
+            getActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
         setContentView(R.layout.word_list);
 
         // Create and setup the {@link AudioManager} to request audio focus
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-
 
         // Create a list of words
         // ArrayList is final so we can call it from the Overrided method onItemClick using Word word = words.get(position);
