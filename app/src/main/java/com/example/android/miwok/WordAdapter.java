@@ -36,7 +36,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
      * @param words           is the list of {@link Word}s to be displayed.
      * @param colorResourceId is the resource ID for the background color for this list of words
      */
-    public WordAdapter(Context context, ArrayList words, int colorResourceId) {
+    public WordAdapter(Context context, ArrayList <Word> words, int colorResourceId) {
         super(context, 0, words);
         mColorResourceId = colorResourceId;
     }
@@ -60,29 +60,36 @@ public class WordAdapter extends ArrayAdapter<Word> {
         TextView defaultTextView = (TextView) listItemView.findViewById(R.id.default_text_view);
         // Get the default word from the current Word object and
         // set this text on the name default_text_view TextView
+        if (currentWord != null) {
         defaultTextView.setText(currentWord.getDefaultTranslation());
+        }
 
         // Find the TextView in the list_item.xml layout
         TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
         // Get the miwok translation from the current Word object and
         // set this text on the miwok_text_view TextView
+        if (currentWord != null) {
         miwokTextView.setText(currentWord.getMiwokTranslation());
+        }
 
         // Find the ImageView in the list_item.xml layout
         ImageView iconImage = (ImageView) listItemView.findViewById(R.id.iconImage);
 
-        if (currentWord.hasImage()) {
-            // If an image is available,
-            // Get the appropriate image from the current object and
-            // set this resource id on the imageView
-            iconImage.setImageResource(currentWord.getImageResourceId());
+        if (currentWord != null) {
+            if (currentWord.hasImage()) {
+                // If an image is available,
+                // Get the appropriate image from the current object and
+                // set this resource id on the imageView
+                iconImage.setImageResource(currentWord.getImageResourceId());
 
-            // If view was previously hidden, we need to make it visible again
-            iconImage.setVisibility(View.VISIBLE);
-        } else {
-            // Hide the ImageView {set visibility to GONE}
-            iconImage.setVisibility(View.GONE);
+                // If view was previously hidden, we need to make it visible again
+                iconImage.setVisibility(View.VISIBLE);
+            } else {
+                // Hide the ImageView {set visibility to GONE}
+                iconImage.setVisibility(View.GONE);
+            }
         }
+
 
 
         // Set the theme color for the list item
