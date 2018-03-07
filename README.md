@@ -5,9 +5,15 @@ This app displays lists of vocabulary words for the user to learn the Miwok lang
 Used in a Udacity course in the Beginning Android Nanodegree.  This will eventually be made into a Korean App.
 
 
-Demo
+Final Version
 --------------
-![Alt Text](https://github.com/mrk-han/miwok/blob/master/miwok_demonstration.gif)
+![Final Version](https://github.com/mrk-han/miwok/blob/master/miwok_demo1.gif)
+
+
+Earlier Version
+--------------
+![Early Version Text](https://github.com/mrk-han/miwok/blob/master/miwok_demonstration.gif)
+
 
 
 Pre-requisites
