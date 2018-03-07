@@ -157,7 +157,6 @@ public class FamilyMembersFragment extends Fragment {
     }
 
 
-
     /**
      * Clean up the media player by releasing its resources.
      */
@@ -188,6 +187,17 @@ public class FamilyMembersFragment extends Fragment {
         releaseMediaPlayer();
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        // Release media resources when swiping between tabs
+        releaseMediaPlayer();
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        releaseMediaPlayer();
+    }
 
 }
