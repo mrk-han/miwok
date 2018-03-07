@@ -2,6 +2,7 @@ package com.example.android.miwok;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,7 +16,18 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         //
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_category);
+
+        // Find the view pager that will allow the user to swipe between fragments
+        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+
+        // Create an adapter that knows which fragment should be shown on each page
+        MiwokViewPagerAdapter adapter = new MiwokViewPagerAdapter(getSupportFragmentManager());
+
+        // Set the adapter onto the view pager
+        if (viewPager != null) {
+            viewPager.setAdapter(adapter);
+        }
 
         // Find the View that shows the numbers category
         //
