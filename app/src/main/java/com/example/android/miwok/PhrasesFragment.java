@@ -188,6 +188,17 @@ public class PhrasesFragment extends Fragment {
         releaseMediaPlayer();
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        // Release media resources when swiping between tabs
+        releaseMediaPlayer();
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        releaseMediaPlayer();
+    }
 
 }
