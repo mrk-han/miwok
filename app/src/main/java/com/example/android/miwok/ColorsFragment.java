@@ -6,6 +6,7 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -160,6 +161,17 @@ public class ColorsFragment extends Fragment {
 
 
         return rootView;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisible) {
+        super.setUserVisibleHint(isVisible);
+
+        Log.e("ColorsFragment", "setUserVisibleHint: isVisible = " + isVisible);
+
+        if (!isVisible) {
+            releaseMediaPlayer();
+        }
     }
 
     @Override
